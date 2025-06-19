@@ -1,0 +1,105 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "63bb2cdb677280ae9845",
+  "position": {
+    "x": 27.682801235839342,
+    "y": 168.73326467559218,
+    "z": 11001,
+    "height": 519.3820803295572,
+    "width": 250.46343975283216,
+    "tabOrder": 11001
+  },
+  "visual": {
+    "visualType": "map",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Historico-Transporte"
+                    }
+                  },
+                  "Property": "Destino-Cidade"
+                }
+              },
+              "queryRef": "Historico-Transporte.Destino-Cidade",
+              "nativeQueryRef": "Destino-Cidade",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Valor do Frete"
+                        }
+                      },
+                      "Property": " Valor do Frete "
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Valor do Frete. Valor do Frete )",
+              "nativeQueryRef": "Soma de  Valor do Frete "
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "mapStyles": [
+        {
+          "properties": {
+            "mapTheme": {
+              "expr": {
+                "Literal": {
+                  "Value": "'aerial'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
